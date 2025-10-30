@@ -24,12 +24,16 @@ export class HeroDetailComponent {
   ) { }
   
   ngOnInit(): void {
-  this.getHero();
-}
+    this.getHero();
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
 
   getHero(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.heroService.getHero(id)
-      .subscribe((hero: Hero) => this.hero = hero);
+      .subscribe( hero => this.hero = hero);
   }
 }
