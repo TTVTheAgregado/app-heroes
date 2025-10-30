@@ -11,6 +11,7 @@ import { HeroService } from '../hero.service';
   standalone: true,
   imports: [CommonModule, RouterModule]
 })
+
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
 
